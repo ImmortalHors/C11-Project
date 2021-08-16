@@ -26,8 +26,8 @@ function setup(){
 function draw() {
   background("green");
   drawSprites();
-  if(path.y<300){
-    path.y=path.height
+  if(path.y>500){
+    path.y=height/2
   }
   
 }
