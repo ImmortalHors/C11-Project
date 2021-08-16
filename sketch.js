@@ -10,14 +10,14 @@ function preload(){
 }
 
 function setup(){
-  createCanvas(1500,3000);
+  createCanvas(800,800);
   //create sprites here
-  path = createSprite(800,400)
+  path = createSprite(400,400)
   path.addImage(pathImage)
   path.velocityY=4
   path.scale=1.5
 
-  runner = createSprite(820,400)
+  runner = createSprite(400,700,30,30)
   runner.addAnimation("RUNNER",runnerImage)
   runner.scale=.1
 
@@ -26,8 +26,8 @@ function setup(){
 function draw() {
   background("green");
   drawSprites();
-  if(path.y>500){
-    path.y=400
+  if(path.y<600){
+    path.y=height/2
   }
   
 }
